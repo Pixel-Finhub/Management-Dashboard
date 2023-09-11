@@ -195,7 +195,7 @@
 
         <!-- partial -->
         <div class="container-fluid page-body-wrapper">
-            
+
             <!-- partial -->
             <!-- partial:partials/_sidebar.html -->
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
@@ -210,8 +210,8 @@
 
                     <!-- category item -->
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="pages/customer-list.html" aria-expanded="false"
-                            aria-controls="">
+                        <a class="nav-link" data-bs-toggle="collapse" href="pages/customer-list.html"
+                            aria-expanded="false" aria-controls="">
                             <i class="menu-icon mdi mdi-account-multiple"></i> <span class="menu-title">View all
                                 customers</span>
                         </a>
@@ -386,66 +386,42 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                  <div class="row">
-                    <div class="col-lg-6 grid-margin stretch-card">
-                      <div class="card">
-                        <div class="card-body">
-                          <h4 class="card-title">Basic Table</h4>
-                          <p class="card-description">
-                            Add class <code>.table</code>
-                          </p>
-                          <div class="table-responsive">
-                            <table class="table">
-                              <thead>
-                                <tr>
-                                  <th>Profile</th>
-                                  <th>VatNo.</th>
-                                  <th>Created</th>
-                                  <th>Status</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                  <td>Jacob</td>
-                                  <td>53275531</td>
-                                  <td>12 May 2017</td>
-                                  <td><label class="badge badge-danger">Pending</label></td>
-                                </tr>
-                                <tr>
-                                  <td>Messsy</td>
-                                  <td>53275532</td>
-                                  <td>15 May 2017</td>
-                                  <td><label class="badge badge-warning">In progress</label></td>
-                                </tr>
-                                <tr>
-                                  <td>John</td>
-                                  <td>53275533</td>
-                                  <td>14 May 2017</td>
-                                  <td><label class="badge badge-info">Fixed</label></td>
-                                </tr>
-                                <tr>
-                                  <td>Peter</td>
-                                  <td>53275534</td>
-                                  <td>16 May 2017</td>
-                                  <td><label class="badge badge-success">Completed</label></td>
-                                </tr>
-                                <tr>
-                                  <td>Dave</td>
-                                  <td>53275535</td>
-                                  <td>20 May 2017</td>
-                                  <td><label class="badge badge-warning">In progress</label></td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </div>
+                    <div class="row">
+                        <div class="col-12 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Pixel Insurance Customers</h4>
+                                    <p class="card-description">
+                                        #All
+                                    </p>
+                                    <div class="table-responsive">
+                                        <table class="table" id="customer-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Customer ID</th>
+                                                    <th>Full Name</th>
+                                                    <th>Username</th>
+                                                    <th>Email</th>
+                                                    <th>Contact Number</th>
+                                                    <th>Address</th>
+                                                    <th>Date of Birth</th>
+                                                    <th>Gender</th>
+                                                    <th>National ID </th>
+                                                    <th>Last Login</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="customer-table-items">
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
                 <!-- content-wrapper ends -->
-                
-              </div>
+
+            </div>
             <!-- main-panel ends -->
 
 
@@ -477,6 +453,16 @@
     <script src="../js/dashboard.js"></script>
     <script src="../js/Chart.roundedBarCharts.js"></script>
     <!-- End custom js for this page-->
+
+
+    <!-- CUSTOM JS -->
+    <script src="../controlers/customer-list.js"></script>
+    <!-- END CUSTOM JS -->
+
+    <script>
+        // Call the function with the JSON data to populate the table
+        populateTable(jsonData);
+    </script>
 </body>
 
 </html>
