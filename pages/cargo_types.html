@@ -61,8 +61,8 @@
             <div class="navbar-menu-wrapper d-flex align-items-top">
                 <ul class="navbar-nav">
                     <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                        <h1 class="welcome-text">Customer Management</h1>
-                        <h3 class="welcome-sub-text">Customer list</h3>
+                        <h1 class="welcome-text">Policy Management</h1>
+                        <h3 class="welcome-sub-text">Cargo Types</h3>
                     </li>
                 </ul>
 
@@ -391,27 +391,39 @@
                         <div class="col-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Pixel Insurance Customers</h4>
+                                    <h4 class="card-title">Supported Cargo</h4>
                                     <p class="card-description">
-                                        #All
+                                        #Registerd
                                     </p>
                                     <div class="table-responsive">
                                         <table class="table" id="customer-table">
                                             <thead>
                                                 <tr>
-                                                    <th>Customer ID</th>
-                                                    <th>Full Name</th>
-                                                    <th>Username</th>
-                                                    <th>Email</th>
-                                                    <th>Contact Number</th>
-                                                    <th>Address</th>
-                                                    <th>Date of Birth</th>
-                                                    <th>Gender</th>
-                                                    <th>National ID </th>
-                                                    <th>Last Login</th>
+                                                    <th>ItemID (Primary Key)</th>
+                                                    <th>ItemName</th>
+                                                    <th>ItemDescription</th>
+                                                    <th>ItemValue</th>
+                                                    <th>ItemRiskFactorScore</th>
+                                                    <th>ItemWeightFactorScore</th>
+                                                    <th>ItemSizeFactorScore</th>
+                                                    <th>ItemTypeFactorScore</th>
+                                                    <th>ItemPackagingFactorScore</th>
+                                                    <th>TransitDurationFactorScore</th>
+                                                    <th>TransitDistanceFactorScore</th>
+                                                    <th>TransitRouteFactorScore</th>
+                                                    <th>TransitModeFactorScore</th>
+                                                    <th>TransitHandlingFactorScore</th>
+                                                    <th>WeatherFactorScore</th>
+                                                    <th>TemperatureFactorScore</th>
+                                                    <th>HumidityFactorScore</th>
+                                                    <th>AltitudeFactorScore</th>
+                                                    <th>SecurityRiskFactorScore</th>
+                                                    <th>HumanFactorRiskFactorScore</th>
+                                                    <th>RiskScore</th>
                                                 </tr>
                                             </thead>
-                                            <tbody id="customer-table-items">
+                                            <tbody>
+                                            <tbody id="registered_cargo_types">
                                             </tbody>
                                         </table>
                                     </div>
