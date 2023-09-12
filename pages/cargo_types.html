@@ -61,8 +61,8 @@
             <div class="navbar-menu-wrapper d-flex align-items-top">
                 <ul class="navbar-nav">
                     <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-                        <h1 class="welcome-text">Customer Management</h1>
-                        <h3 class="welcome-sub-text">Details</h3>
+                        <h1 class="welcome-text">Policy Management</h1>
+                        <h3 class="welcome-sub-text">Cargo Types</h3>
                     </li>
                 </ul>
 
@@ -198,6 +198,7 @@
 
             <!-- partial -->
             <!-- partial:partials/_sidebar.html -->
+
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
@@ -296,7 +297,8 @@
 
                     <!-- category item -->
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="/pages/cargo_types.html" aria-expanded="false" aria-controls="">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/pages/cargo_types.html"
+                            aria-expanded="false" aria-controls="">
                             <i class="menu-icon fa fa-ship"></i> <span class="menu-title">Cargo Types</span>
                         </a>
                     </li>
@@ -382,171 +384,54 @@
             </nav>
 
 
-
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="row">
-                        <div class="col-md-6 grid-margin stretch-card">
+                        <div class="col-12 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Basic Details</h4>
+                                    <h4 class="card-title">Supported Cargo</h4>
                                     <p class="card-description">
-                                        Profile details
+                                        #Registerd
                                     </p>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <address>
-                                                <p class="fw-bold" id="full_name"></p>
-                                                <p id="username">
-                                                </p>
-                                                <p id="phone_number">
-                                                </p>
-                                                <p class="fw-bold mt-2">
-                                                    Joined:
-                                                </p>
-                                                <p id="joined_on">
-                                                </p>
-                                            </address>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <address class="text-primary">
-                                                <p class="fw-bold">
-                                                    E-mail
-                                                </p>
-                                                <p class="mb-2" id="email">...
-                                                </p>
-                                                <p class="fw-bold">
-                                                    Address
-                                                </p>
-                                                <p id="address">...
-                                                </p>
-                                            </address>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Policies</h4>
-                                    <p class="card-description">
-                                        #purchases
-                                    </p>
-                                    <div class="row">
-                                        <div class="col d-flex align-items-center">
-                                            <table class="table table-striped col-12">
-                                                <thead>
-                                                    <tr>
-                                                        <th>~</th>
-                                                        <th>Base Package</th>
-                                                        <th>Start Date</th>
-                                                        <th>End Date</th>
-                                                        <th>Amount</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="insurancePolicies">
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">App Activity</h4>
-                                    <p class="card-description">
-                                        App usage statistics
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="wrapper border-bottom mb-4 pb-4">
-                                                <h4 class="font-weight-semibold mb-0" id="total_in_app_time_spent">30
-                                                    Minutes</h4>
-                                                <div class="d-flex align-items-center">
-                                                    <p class="mb-0">Total time spent</p>
-                                                    <div class="dot-indicator bg-primary ml-auto"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 mt-4 mt-md-0">
-                                            <div class="wrapper border-bottom mb-4 pb-4">
-                                                <h4 class="font-weight-semibold mb-0" id="average_time_spent">5 Minutes
-                                                </h4>
-                                                <div class="d-flex align-items-center">
-                                                    <p class="mb-0">Average Time</p>
-                                                    <div class="dot-indicator bg-primary ml-auto"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Cargo Transported</h4>
-                                    <p class="card-description">
-                                        Cargo types transported
-                                    </p>
-                                    <div class="row">
-                                        <div class="col d-flex align-items-center">
-                                            <table class="table table-striped col-12">
-                                                <thead>
-                                                    <tr>
-                                                        <th>~</th>
-                                                        <th>Cargo Name</th>
-                                                        <th>Premium Rate</th>
-                                                        <th>Frequency</th>
-                                                        <th>Total Spent</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="cargoTypes">
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6 grid-margin stretch-card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Payment History</h4>
-                                    <p class="card-description">
-                                        payment logs
-                                    </p>
-                                    <div class="row">
-                                        <div class="col d-flex align-items-center">
-                                            <table class="table table-striped col-12">
-                                                <thead>
-                                                    <tr>
-                                                        <th>~</th>
-                                                        <th>Invoice Id</th>
-                                                        <th>Package Id</th>
-                                                        <th>Amount Paid</th>
-                                                        <th>Date</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody id="payment_history">
-
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <div class="table-responsive">
+                                        <table class="table" id="customer-table-">
+                                            <thead>
+                                                <tr>
+                                                    <th>ItemID</th>
+                                                    <th>ItemName</th>
+                                                    <th>ItemDescription</th>
+                                                    <th>ItemValue</th>
+                                                    <th>ItemRiskFactorScore</th>
+                                                    <th>ItemWeightFactorScore</th>
+                                                    <th>ItemSizeFactorScore</th>
+                                                    <th>ItemTypeFactorScore</th>
+                                                    <th>ItemPackagingFactorScore</th>
+                                                    <th>TransitDurationFactorScore</th>
+                                                    <th>TransitDistanceFactorScore</th>
+                                                    <th>TransitRouteFactorScore</th>
+                                                    <th>TransitModeFactorScore</th>
+                                                    <th>TransitHandlingFactorScore</th>
+                                                    <th>WeatherFactorScore</th>
+                                                    <th>TemperatureFactorScore</th>
+                                                    <th>HumidityFactorScore</th>
+                                                    <th>AltitudeFactorScore</th>
+                                                    <th>SecurityRiskFactorScore</th>
+                                                    <th>HumanFactorRiskFactorScore</th>
+                                                    <th>RiskScore</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tbody id="registered_cargo_types">
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- content-wrapper ends -->
 
             </div>
@@ -584,84 +469,12 @@
 
 
     <!-- CUSTOM JS -->
-    <script src="../controlers/customer-details.js"></script>
+    <script src="../controlers/cargo_types.js"></script>
     <!-- END CUSTOM JS -->
 
     <script>
-        // Sample data for Basic Details
-        const basicDetailsData = {
-            full_name: 'Elled Zanzibar',
-            username: 'elledzanzibar',
-            phone_number: '+255672204508',
-            joined_on: '12 May, 2023',
-            email: 'johndoe@exampleemail.com',
-            address: 'Pendo St. Morogoro'
-        };
-        // Call the function to populate the Basic Details table
-        populateBasicDetails(basicDetailsData);
-
-        // Sample data for Policies
-        const policiesData = [
-            {
-                base_package: 'Package 1',
-                start_date: '2023-09-01',
-                end_date: '2023-09-30',
-                amount: '$100'
-            },
-            {
-                base_package: 'Package 2',
-                start_date: '2023-08-15',
-                end_date: '2023-09-15',
-                amount: '$75'
-            }
-        ];
-        // Call the function to populate the Policies table
-        populatePolicies(policiesData);
-
-        // Sample data for App Activity
-        const appActivityData = {
-            total_in_app_time_spent: '30 Minutes',
-            average_time_spent: '5 Minutes'
-        };
-        // Call the function to populate the App Activity table
-        populateAppActivity(appActivityData);
-
-        // Sample data for Cargo Types
-        const cargoTypesData = [
-            {
-                cargo_name: 'Cargo 1',
-                premium_rate: '$50',
-                frequency: 'Monthly',
-                total_spent: '$500'
-            },
-            {
-                cargo_name: 'Cargo 2',
-                premium_rate: '$60',
-                frequency: 'Weekly',
-                total_spent: '$240'
-            }
-        ];
-        // Call the function to populate the Cargo Types table
-        populateCargoTypes(cargoTypesData);
-
-        // Sample data for Payment History
-        const paymentHistoryData = [
-            {
-                invoice_id: 'INV001',
-                package_id: 'Package 1',
-                amount_paid: '$100',
-                date: '2023-09-05'
-            },
-            {
-                invoice_id: 'INV002',
-                package_id: 'Package 2',
-                amount_paid: '$75',
-                date: '2023-08-20'
-            }
-        ];
-        // Call the function to populate the Payment History table
-        populatePaymentHistory(paymentHistoryData);
-
+        // Call the function to populate the table with the JSON data
+        populateCargoTable(registeredCargoTypes);
     </script>
 </body>
 

@@ -1,183 +1,193 @@
 <!-- partial:partials/_sidebar.html -->
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
-  <ul class="nav">
-      <li class="nav-item">
-          <a class="nav-link" href="/">
-              <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
-          </a>
-      </li>
-      <li class="nav-item nav-category">Customer Management</li>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/">
+                <i class="mdi mdi-grid-large menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </a>
+        </li>
+        <li class="nav-item nav-category">Customer Management</li>
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="pages/customer-list.html" aria-expanded="false"
-              aria-controls="">
-              <i class="menu-icon mdi mdi-account-multiple"></i> <span class="menu-title">View all
-                  customers</span>
-          </a>
-      </li>
-      <!-- end category item -->
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false"
-              aria-controls="ui-basic">
-              <i class="menu-icon mdi mdi-account-card-details"></i> <span class="menu-title">Customers
-                  details</span>
-          </a>
-      </li>
-      <!-- end category item -->
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#customer-communication"
-              aria-expanded="false" aria-controls="customer-communication">
-              <i class="menu-icon fa fa-comment-o"></i>
-              <span class="menu-title">Feedback</span>
-              <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="customer-communication">
-              <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="#">In Feedback</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Customer Service></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Policy Feedback</a></li>
-              </ul>
-          </div>
-      </li>
-      <!-- end category item -->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="/pages/customer-list.html"
+                aria-expanded="false" aria-controls="">
+                <i class="menu-icon mdi mdi-account-multiple"></i> <span class="menu-title">View all
+                    customers</span>
+            </a>
+        </li>
+        <!-- end category item -->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="/pages/customer-details.html"
+                aria-expanded="false" aria-controls="ui-basic">
+                <i class="menu-icon mdi mdi-account-card-details"></i> <span class="menu-title">Customers
+                    details</span>
+            </a>
+        </li>
+        <!-- end category item -->
+        <!-- category item -->
+        <li class="nav-item collapse">
+            <a class="nav-link" data-bs-toggle="collapse" href="#customer-communication"
+                aria-expanded="false" aria-controls="customer-communication">
+                <i class="menu-icon fa fa-comment-o"></i>
+                <span class="menu-title">Feedback</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="customer-communication">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">In Feedback</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Customer Service></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Policy Feedback</a></li>
+                </ul>
+            </div>
+        </li>
+        <!-- end category item -->
 
 
-      <li class="nav-item nav-category">Clam Processing</li>
+        <li class="nav-item nav-category">Clam Processing</li>
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#claim-processing" aria-expanded="false"
-              aria-controls="claim-processing">
-              <i class="menu-icon fa fa-file-text-o"></i>
-              <span class="menu-title">View All Claims</span>
-              <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="claim-processing">
-              <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="#">New Claims</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Pending Claim</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Issued Claims</a></li>
-              </ul>
-          </div>
-      </li>
-      <!-- end category item -->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#claim-processing" aria-expanded="false"
+                aria-controls="claim-processing">
+                <i class="menu-icon fa fa-file-text-o"></i>
+                <span class="menu-title">View All Claims</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="claim-processing">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">New Claims</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Pending Claim</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Issued Claims</a></li>
+                </ul>
+            </div>
+        </li>
+        <!-- end category item -->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon mdi mdi-account-card-details"></i> <span class="menu-title">Track
-                  claim</span>
-          </a>
-      </li>
-      <!-- end category item -->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon mdi mdi-account-card-details"></i> <span class="menu-title">Track
+                    claim</span>
+            </a>
+        </li>
+        <!-- end category item -->
 
-      <li class="nav-item nav-category">Policy Management</li>
+        <li class="nav-item nav-category">Policy Management</li>
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-file-text-o"></i> <span class="menu-title">View all
-                  policies</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-file-text-o"></i> <span class="menu-title">View all
+                    policies</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-pencil-square-o"></i> <span class="menu-title">Create new
-                  policy</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-pencil-square-o"></i> <span class="menu-title">Create new
+                    policy</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-circle-o-notch"></i> <span class="menu-title">Update policy</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="/pages/cargo_types.html"
+                aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-ship"></i> <span class="menu-title">Cargo Types</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-calculator"></i> <span class="menu-title">Pricing
-                  Calculator</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="/pages/add_cargo_type.html"
+                aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-plus"></i> <span class="menu-title">Add Cargo Type</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-file-text-o"></i> <span class="menu-title">Quote History</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-calculator"></i> <span class="menu-title">Pricing
+                    Calculator</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <li class="nav-item nav-category">Notifications</li>
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-file-text-o"></i> <span class="menu-title">Quote History</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-bell-o"></i> <span class="menu-title">View all
-                  notifications</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <li class="nav-item nav-category">Notifications</li>
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-              <i class="menu-icon fa fa-bell-o"></i> <span class="menu-title">Send notification</span>
-          </a>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-bell-o"></i> <span class="menu-title">View all
+                    notifications</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <li class="nav-item nav-category">Reports</li>
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                <i class="menu-icon fa fa-bell-o"></i> <span class="menu-title">Send notification</span>
+            </a>
+        </li>
+        <!-- end category item-->
 
-      <!-- category item -->
+        <li class="nav-item nav-category">Reports</li>
 
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#report" aria-expanded="false"
-              aria-controls="report">
-              <i class="menu-icon fa fa-file-text-o"></i>
-              <span class="menu-title">View all reports</span>
-              <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="report">
-              <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="#">Payment Report</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Customer Report</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Claim Report</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Policy Report</a></li>
-              </ul>
-          </div>
-      </li>
-      <!-- end category item-->
+        <!-- category item -->
 
-      <!-- category item -->
-      <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="collapse" href="#report" aria-expanded="false"
-              aria-controls="report">
-              <i class="menu-icon fa fa-file-text-o"></i>
-              <span class="menu-title">Generate report</span>
-              <i class="menu-arrow"></i>
-          </a>
-          <div class="collapse" id="report">
-              <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="#">Payment Report</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Customer Report</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Claim Report</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Policy Report</a></li>
-              </ul>
-          </div>
-      </li>
-      <!-- end category item-->
-  </ul>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#report" aria-expanded="false"
+                aria-controls="report">
+                <i class="menu-icon fa fa-file-text-o"></i>
+                <span class="menu-title">View all reports</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="report">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">Payment Report</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Customer Report</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Claim Report</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Policy Report</a></li>
+                </ul>
+            </div>
+        </li>
+        <!-- end category item-->
+
+        <!-- category item -->
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#report" aria-expanded="false"
+                aria-controls="report">
+                <i class="menu-icon fa fa-file-text-o"></i>
+                <span class="menu-title">Generate report</span>
+                <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="report">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" href="#">Payment Report</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Customer Report</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Claim Report</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="#">Policy Report</a></li>
+                </ul>
+            </div>
+        </li>
+        <!-- end category item-->
+    </ul>
 </nav>
