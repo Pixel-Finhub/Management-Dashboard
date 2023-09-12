@@ -396,10 +396,10 @@
                                         #Registerd
                                     </p>
                                     <div class="table-responsive">
-                                        <table class="table" id="customer-table">
+                                        <table class="table" id="customer-table-">
                                             <thead>
                                                 <tr>
-                                                    <th>ItemID (Primary Key)</th>
+                                                    <th>ItemID</th>
                                                     <th>ItemName</th>
                                                     <th>ItemDescription</th>
                                                     <th>ItemValue</th>
@@ -469,12 +469,12 @@
 
 
     <!-- CUSTOM JS -->
-    <script src="../controlers/customer-list.js"></script>
+    <script src="../controlers/cargo_types.js"></script>
     <!-- END CUSTOM JS -->
 
     <script>
-        // Call the function with the JSON data to populate the table
-        populateTable(jsonData);
+        // Call the function to populate the table with the JSON data
+        populateCargoTable(registeredCargoTypes);
     </script>
 </body>
 
