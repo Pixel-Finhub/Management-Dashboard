@@ -396,61 +396,181 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="row">
-                        <div class="col-12 grid-margin stretch-card">
+                    <form class="row">
+                        <!-- Cargo Information -->
+                        <div class="col-md-6 grid-margin stretch-card">
                             <div class="card">
                                 <div class="card-body">
-                                    <h4 class="card-title">Supported Cargo</h4>
-                                    <p class="card-description">
-                                        #Registerd
-                                    </p>
-                                    <div class="table-responsive">
-                                        <table class="table" id="customer-table-">
-                                            <thead>
-                                                <tr>
-                                                    <th>ItemID</th>
-                                                    <th>ItemName</th>
-                                                    <th>ItemDescription</th>
-                                                    <th>ItemValue</th>
-                                                    <th>ItemRiskFactorScore</th>
-                                                    <th>ItemWeightFactorScore</th>
-                                                    <th>ItemSizeFactorScore</th>
-                                                    <th>ItemTypeFactorScore</th>
-                                                    <th>ItemPackagingFactorScore</th>
-                                                    <th>TransitDurationFactorScore</th>
-                                                    <th>TransitDistanceFactorScore</th>
-                                                    <th>TransitRouteFactorScore</th>
-                                                    <th>TransitModeFactorScore</th>
-                                                    <th>TransitHandlingFactorScore</th>
-                                                    <th>WeatherFactorScore</th>
-                                                    <th>TemperatureFactorScore</th>
-                                                    <th>HumidityFactorScore</th>
-                                                    <th>AltitudeFactorScore</th>
-                                                    <th>SecurityRiskFactorScore</th>
-                                                    <th>HumanFactorRiskFactorScore</th>
-                                                    <th>RiskScore</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tbody id="registered_cargo_types">
-                                            </tbody>
-                                        </table>
+                                    <h4 class="card-title">Cargo Information</h4>
+                                    <p class="card-description">Enter cargo details</p>
+                                    <div class="form-group">
+                                        <label for="itemName">Item Name</label>
+                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemDescription">Item Description</label>
+                                        <textarea class="form-control" id="itemDescription" name="itemDescription"
+                                            rows="3"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemValue">Item Value (in bushels)</label>
+                                        <input type="number" class="form-control" id="itemValue" name="itemValue"
+                                            required>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                        <!-- Risk Factors -->
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Risk Factors</h4>
+                                    <p class="card-description">Enter risk factor scores</p>
+                                    <div class="form-group">
+                                        <label for="itemRiskFactor">Risk Factor Score</label>
+                                        <input type="number" class="form-control" id="itemRiskFactor"
+                                            name="itemRiskFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemWeightFactor">Weight Factor Score</label>
+                                        <input type="number" class="form-control" id="itemWeightFactor"
+                                            name="itemWeightFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemSizeFactor">Size Factor Score</label>
+                                        <input type="number" class="form-control" id="itemSizeFactor"
+                                            name="itemSizeFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemTypeFactor">Type Factor Score</label>
+                                        <input type="number" class="form-control" id="itemTypeFactor"
+                                            name="itemTypeFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="itemPackagingFactor">Packaging Factor Score</label>
+                                        <input type="number" class="form-control" id="itemPackagingFactor"
+                                            name="itemPackagingFactor" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Transit Factors -->
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Transit Factors</h4>
+                                    <p class="card-description">Enter transit factor scores</p>
+                                    <div class="form-group">
+                                        <label for="transitDurationFactor">Transit Duration Factor Score</label>
+                                        <input type="number" class="form-control" id="transitDurationFactor"
+                                            name="transitDurationFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="transitDistanceFactor">Transit Distance Factor Score</label>
+                                        <input type="number" class="form-control" id="transitDistanceFactor"
+                                            name="transitDistanceFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="transitRouteFactor">Transit Route Factor Score</label>
+                                        <input type="number" class="form-control" id="transitRouteFactor"
+                                            name="transitRouteFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="transitModeFactor">Transit Mode Factor Score</label>
+                                        <input type="number" class="form-control" id="transitModeFactor"
+                                            name="transitModeFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="transitHandlingFactor">Transit Handling Factor Score</label>
+                                        <input type="number" class="form-control" id="transitHandlingFactor"
+                                            name="transitHandlingFactor" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Weather Factors -->
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Weather Factors</h4>
+                                    <p class="card-description">Enter weather factor scores</p>
+                                    <div class="form-group">
+                                        <label for="weatherFactor">Weather Factor Score</label>
+                                        <input type="number" class="form-control" id="weatherFactor"
+                                            name="weatherFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="temperatureFactor">Temperature Factor Score</label>
+                                        <input type="number" class="form-control" id="temperatureFactor"
+                                            name="temperatureFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="humidityFactor">Humidity Factor Score</label>
+                                        <input type="number" class="form-control" id="humidityFactor"
+                                            name="humidityFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="altitudeFactor">Altitude Factor Score</label>
+                                        <input type="number" class="form-control" id="altitudeFactor"
+                                            name="altitudeFactor" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security and Human Factors -->
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Security and Human Factors</h4>
+                                    <p class="card-description">Enter security and human factor scores</p>
+                                    <div class="form-group">
+                                        <label for="securityRiskFactor">Security Risk Factor Score</label>
+                                        <input type="number" class="form-control" id="securityRiskFactor"
+                                            name="securityRiskFactor" step="0.01" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="humanFactorRiskFactor">Human Factor Risk Factor Score</label>
+                                        <input type="number" class="form-control" id="humanFactorRiskFactor"
+                                            name="humanFactorRiskFactor" step="0.01" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Risk Score -->
+                        <div class="col-md-6 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Risk Score</h4>
+                                    <p class="card-description">Calculated risk score</p>
+                                    <div class="form-group">
+                                        <label for="riskScore">Risk Score</label>
+                                        <input type="number" class="form-control" id="riskScore" name="riskScore"
+                                            step="0.01" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </div>
-                <!-- content-wrapper ends -->
+
+                <button type="submit" class="btn btn-primary">Add Cargo Type</button>
+                </form>
 
             </div>
-            <!-- main-panel ends -->
-
-
+            <!-- content-wrapper ends -->
 
         </div>
+        <!-- main-panel ends -->
 
-        <!-- page-body-wrapper ends -->
+
+
+    </div>
+
+    <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 
