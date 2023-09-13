@@ -235,3 +235,49 @@ HTTP/1.1 400 Bad Request
   "message": "Failed to add cargo type. Invalid data."
 }
 ```
+
+## View All Policies
+
+### GET api/policies
+```json
+Content-Type: application/json
+
+[
+    {
+        "PolicyID": 1,
+        "UserName": "John Doe",
+        "PackageName": "Gold Package",
+        "StartDate": "2023-09-01",
+        "EndDate": "2023-09-30",
+        "PremiumAmount": 100.00,
+        "PolicyStatus": "Active",
+        "PolicyCoverage": "Comprehensive",
+        "DeductibleAmount": 500.00,
+        "Claimed": "Yes",
+        "ContactInformation": "Contact details",
+        "PaymentDate": "2023-09-01",
+        "RenewalDate": "2024-09-01",
+        "CoverageLimit": "$1,000,000",
+        "ItemsCovered": 5
+    },
+    {
+        "PolicyID": 2,
+        "UserName": "Jane Smith",
+        "PackageName": "Silver Package",
+        "StartDate": "2023-09-05",
+        "EndDate": "2023-09-25",
+        "PremiumAmount": 80.50,
+        "PolicyStatus": "Expired",
+        "PolicyCoverage": "Basic",
+        "DeductibleAmount": 250.00,
+        "Claimed": "No",
+        "ContactInformation": "Contact details",
+        "PaymentDate": "2023-09-05",
+        "RenewalDate": "2024-09-05",
+        "CoverageLimit": "$500,000",
+        "ItemsCovered": 2
+    }
+    // Add more policy objects as needed
+]
+
+```
