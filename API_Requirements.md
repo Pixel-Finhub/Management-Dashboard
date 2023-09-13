@@ -191,3 +191,32 @@ Content-Type: application/json
 ]
 
 ```
+
+## Adding Cargo Type
+
+### POST api/cargo-types/add
+```json
+Content-Type: application/json
+
+{
+  "itemName": "Crops",
+  "itemDescription": "Freshly harvested crops",
+  "itemValue": 1000,
+  "itemRiskFactor": 2.5,
+  "itemWeightFactor": 4.0,
+  "itemSizeFactor": 3.2,
+  "itemTypeFactor": 3.5,
+  "itemPackagingFactor": 2.0,
+  "transitDurationFactor": 3.8,
+  "transitDistanceFactor": 2.0,
+  "transitRouteFactor": 3.0,
+  "transitModeFactor": 2.8,
+  "transitHandlingFactor": 3.5,
+  "weatherFactor": 4.0,
+  "temperatureFactor": 3.2,
+  "humidityFactor": 4.5,
+  "altitudeFactor": 3.5,
+  "securityRiskFactor": 2.0,
+  "humanFactorRiskFactor": 3.0
+}
+```
