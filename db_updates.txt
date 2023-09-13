@@ -11,3 +11,20 @@ Columns:
 - UpdatedAt (timestamp)
 
 
+Table Name: InsurancePackages
+
+Attributes:
+- PackageID (Primary Key): INT
+- PackageName: VARCHAR(255)
+- CoverageFocus: VARCHAR(255)
+- Deductible: DECIMAL(13, 2)
+- ClaimProcessingTime: INTERVAL
+- CreatedAt: TIMESTAMP
+- PackageDescription: TEXT
+- CoverageTypes: VARCHAR(255)
+- CoverageLimits: TEXT
+- Deductibles: TEXT
+- Premiums: TEXT
+- EligibilityRequirements: TEXT
+- Exclusions: TEXT
+- OtherTermsAndConditions: TEXT
