@@ -62,7 +62,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
                         <h1 class="welcome-text">Policy Management</h1>
-                        <h3 class="welcome-sub-text">Cargo Types</h3>
+                        <h3 class="welcome-sub-text">All policies</h3>
                     </li>
                 </ul>
 
@@ -198,7 +198,6 @@
 
             <!-- partial -->
             <!-- partial:partials/_sidebar.html -->
-
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
@@ -279,7 +278,8 @@
 
                     <!-- category item -->
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/pages/all-policies.html"
+                            aria-expanded="false" aria-controls="">
                             <i class="menu-icon fa fa-file-text-o"></i> <span class="menu-title">View all
                                 policies</span>
                         </a>
@@ -300,6 +300,15 @@
                         <a class="nav-link" data-bs-toggle="collapse" href="/pages/cargo_types.html"
                             aria-expanded="false" aria-controls="">
                             <i class="menu-icon fa fa-ship"></i> <span class="menu-title">Cargo Types</span>
+                        </a>
+                    </li>
+                    <!-- end category item-->
+
+                    <!-- category item -->
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/pages/add_cargo_type.html"
+                            aria-expanded="false" aria-controls="">
+                            <i class="menu-icon fa fa-plus"></i> <span class="menu-title">Add Cargo Type</span>
                         </a>
                     </li>
                     <!-- end category item-->
@@ -396,34 +405,28 @@
                                         #Registerd
                                     </p>
                                     <div class="table-responsive">
-                                        <table class="table" id="customer-table">
+                                        <table id="policyTable" class="table">
                                             <thead>
                                                 <tr>
-                                                    <th>ItemID</th>
-                                                    <th>ItemName</th>
-                                                    <th>ItemDescription</th>
-                                                    <th>ItemValue</th>
-                                                    <th>ItemRiskFactorScore</th>
-                                                    <th>ItemWeightFactorScore</th>
-                                                    <th>ItemSizeFactorScore</th>
-                                                    <th>ItemTypeFactorScore</th>
-                                                    <th>ItemPackagingFactorScore</th>
-                                                    <th>TransitDurationFactorScore</th>
-                                                    <th>TransitDistanceFactorScore</th>
-                                                    <th>TransitRouteFactorScore</th>
-                                                    <th>TransitModeFactorScore</th>
-                                                    <th>TransitHandlingFactorScore</th>
-                                                    <th>WeatherFactorScore</th>
-                                                    <th>TemperatureFactorScore</th>
-                                                    <th>HumidityFactorScore</th>
-                                                    <th>AltitudeFactorScore</th>
-                                                    <th>SecurityRiskFactorScore</th>
-                                                    <th>HumanFactorRiskFactorScore</th>
-                                                    <th>RiskScore</th>
+                                                    <th>Policy ID</th>
+                                                    <th>User Name</th>
+                                                    <th>Package Name</th>
+                                                    <th>Start Date</th>
+                                                    <th>End Date</th>
+                                                    <th>Premium Amount</th>
+                                                    <th>Policy Status</th>
+                                                    <th>Policy Coverage</th>
+                                                    <th>Deductible Amount</th>
+                                                    <th>Claimed</th>
+                                                    <th>Contact Information</th>
+                                                    <th>Payment Date</th>
+                                                    <th>Renewal Date</th>
+                                                    <th>Coverage Limit</th>
+                                                    <th>Number of items covered</th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                            <tbody id="registered_cargo_types">
+                                            <tbody id="policyData">
+                                                <!-- Policy data will be inserted here dynamically  -->
                                             </tbody>
                                         </table>
                                     </div>
@@ -469,12 +472,12 @@
 
 
     <!-- CUSTOM JS -->
-    <script src="../controlers/cargo_types.js"></script>
+    <script src="../controlers/all_policies.js"></script>
     <!-- END CUSTOM JS -->
 
     <script>
-        // Call the function to populate the table with the JSON data
-        populateCargoTable(registeredCargoTypes);
+        // Call the function to populate the table when the page loads
+window.addEventListener("load", populatePolicyTable);
     </script>
 </body>
 
