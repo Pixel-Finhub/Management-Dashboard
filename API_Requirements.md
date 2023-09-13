@@ -220,3 +220,18 @@ Content-Type: application/json
   "humanFactorRiskFactor": 3.0
 }
 ```
+
+### Response
+```json
+HTTP/1.1 200 OK
+{
+  "success": true,
+  "message": "Cargo type added successfully."
+}
+
+HTTP/1.1 400 Bad Request
+{
+  "success": false,
+  "message": "Failed to add cargo type. Invalid data."
+}
+```
