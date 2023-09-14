@@ -407,7 +407,6 @@
                                                     <th>Date of Birth</th>
                                                     <th>Gender</th>
                                                     <th>National ID </th>
-                                                    <th>Last Login</th>
                                                 </tr>
                                             </thead>
                                             <tbody id="customer-table-items">
@@ -456,12 +455,17 @@
 
 
     <!-- CUSTOM JS -->
+    <script src="../controlers/pixel-api-request-engine.js"></script>
     <script src="../controlers/customer-list.js"></script>
     <!-- END CUSTOM JS -->
 
     <script>
-        // Call the function with the JSON data to populate the table
-        populateTable(jsonData);
+        var response_data = null;
+        callAPI('GET', 'https://api.pixel-insurance.patrickmamsery.works/api/users', null, function (response) {
+            // create a 'fa-spin' loader inside the button and put it inside of the table body
+            response_data = response.data.data.data;
+            populateTable(response_data);
+        });
     </script>
 </body>
 

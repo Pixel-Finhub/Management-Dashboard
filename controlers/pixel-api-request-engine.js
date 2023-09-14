@@ -37,15 +37,3 @@ function callAPI(method, url, data, callback) {
         xhr.send();
     }
 }
-
-// Example usage:
-// GET request
-callAPI('GET', 'https://api.example.com/data', null, function (response) {
-    console.log('Response:', response);
-});
-
-// POST request with data
-const postData = { key: 'value' };
-callAPI('POST', 'https://api.example.com/create', postData, function (response) {
-    console.log('Response:', response);
-});

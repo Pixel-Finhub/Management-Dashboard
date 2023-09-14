@@ -568,3 +568,16 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+
+
+
+{       
+    "nidaNumber": "987654321",           // NIDA (National Identification) number
+    "phoneNumber": "+1234567890",          // Hashed password managed by your system
+    "firstName": "John",                // First name from NIDA (if available)
+    "lastName": "Doe",                 // Last name from NIDA (if available)
+    "dateOfBirth": "1990-01-15",       // Date of birth from NIDA (if available)
+    "gender": "Male",                  // Gender from NIDA (if available)
+}
+

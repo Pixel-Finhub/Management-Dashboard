@@ -35,6 +35,11 @@
 
 </head>
 
+<style>
+    .form-check{
+        padding-left: 30px;
+    }
+</style>
 <body>
     <div class="container-scroller">
 
@@ -62,7 +67,7 @@
                 <ul class="navbar-nav">
                     <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
                         <h1 class="welcome-text">Policy Management</h1>
-                        <h3 class="welcome-sub-text">Cargo Types</h3>
+                        <h3 class="welcome-sub-text">Insurance Packages</h3>
                     </li>
                 </ul>
 
@@ -198,7 +203,6 @@
 
             <!-- partial -->
             <!-- partial:partials/_sidebar.html -->
-
             <nav class="sidebar sidebar-offcanvas" id="sidebar">
                 <ul class="nav">
                     <li class="nav-item">
@@ -279,7 +283,8 @@
 
                     <!-- category item -->
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
+                        <a class="nav-link" data-bs-toggle="collapse" href="/pages/all-policies.html"
+                            aria-expanded="false" aria-controls="">
                             <i class="menu-icon fa fa-file-text-o"></i> <span class="menu-title">View all
                                 policies</span>
                         </a>
@@ -288,9 +293,9 @@
 
                     <!-- category item -->
                     <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#" aria-expanded="false" aria-controls="">
-                            <i class="menu-icon fa fa-pencil-square-o"></i> <span class="menu-title">Create new
-                                policy</span>
+                        <a class="nav-link" data-bs-toggle="collapse" href="/pages/insurance_packages.html"
+                            aria-expanded="false" aria-controls="">
+                            <i class="menu-icon fa fa-cubes"></i> <span class="menu-title">Insurance Packages</span>
                         </a>
                     </li>
                     <!-- end category item-->
@@ -396,181 +401,155 @@
             <!-- partial -->
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <form class="row">
-                        <!-- Cargo Information -->
-                        <div class="col-md-6 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Cargo Information</h4>
-                                    <p class="card-description">Enter cargo details</p>
-                                    <div class="form-group">
-                                        <label for="itemName">Item Name</label>
-                                        <input type="text" class="form-control" id="itemName" name="itemName" required>
+                    <div class="row">
+                        <div class="row">
+                            <!-- Card for Displaying Created Packages -->
+                            <div class="col-md-8 grid-margin stretch-card">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Created Insurance Packages</h4>
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Package ID</th>
+                                                        <th>Package Name</th>
+                                                        <th>Coverage Focus</th>
+                                                        <th>Deductible</th>
+                                                        <th>Claim Processing Time</th>
+                                                        <th>Created At</th>
+                                                        <!-- Add other table headers for additional attributes -->
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <!-- Table rows with package data will be inserted here dynamically -->
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Premium Package</td>
+                                                        <td>Comprehensive</td>
+                                                        <td>1000.00</td>
+                                                        <td>30 Days</td>
+                                                        <td>2023-09-01 10:00:00</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+
                                     </div>
-                                    <div class="form-group">
-                                        <label for="itemDescription">Item Description</label>
-                                        <textarea class="form-control" id="itemDescription" name="itemDescription"
-                                            rows="3"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="itemValue">Item Value (in bushels)</label>
-                                        <input type="number" class="form-control" id="itemValue" name="itemValue"
-                                            required>
+                                </div>
+                            </div>
+
+                            <!-- Card for Creating New Package -->
+                            <div class="col-md-4 grid-margin">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card-title">Create New Insurance Package</h4>
+                                        <!-- Form for Creating a New Package -->
+                                        <form id="createPackageForm" class="forms-sample">
+                                            <div class="form-group">
+                                                <label for="packageName">Package Name</label>
+                                                <input type="text" class="form-control" id="packageName"
+                                                    placeholder="Package Name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="packageDescription">Description</label>
+                                                <textarea class="form-control" id="packageDescription" rows="4"
+                                                    placeholder="Description" required></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="coverage">Coverage</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="lossOrDamage"
+                                                        value="Loss or Damage">
+                                                    <label class="form-check-label" for="lossOrDamage">
+                                                        Loss or Damage
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="theft"
+                                                        value="Theft">
+                                                    <label class="form-check-label" for="theft">
+                                                        Theft
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="vandalism"
+                                                        value="Vandalism">
+                                                    <label class="form-check-label" for="vandalism">
+                                                        Vandalism
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="other"
+                                                        value="Other">
+                                                    <label class="form-check-label" for="other">
+                                                        Other (please specify)
+                                                    </label>
+                                                    <input type="text" class="form-control" id="otherCoverage"
+                                                        placeholder="Specify other coverage">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="deductible">Deductible</label>
+                                                <input type="number" step="0.01" class="form-control" id="deductible"
+                                                    placeholder="Deductible" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="premium">Premium</label>
+                                                <input type="number" step="0.01" class="form-control" id="premium"
+                                                    placeholder="Premium" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="targetAudience">Target Audience</label>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="individuals"
+                                                        value="Individuals">
+                                                    <label class="form-check-label" for="individuals">
+                                                        Individuals
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="businesses"
+                                                        value="Businesses">
+                                                    <label class="form-check-label" for="businesses">
+                                                        Businesses
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="otherAudience"
+                                                        value="Other">
+                                                    <label class="form-check-label" for="otherAudience">
+                                                        Other (please specify)
+                                                    </label>
+                                                    <input type="text" class="form-control" id="otherTargetAudience"
+                                                        placeholder="Specify other audience">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="additionalInformation">Additional Information</label>
+                                                <textarea class="form-control" id="additionalInformation" rows="4"
+                                                    placeholder="Any other information that you would like to include about your insurance package"
+                                                    required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Create Package</button>
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Risk Factors -->
-                        <div class="col-md-6 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Risk Factors</h4>
-                                    <p class="card-description">Enter risk factor scores</p>
-                                    <div class="form-group">
-                                        <label for="itemRiskFactor">Risk Factor Score</label>
-                                        <input type="number" class="form-control" id="itemRiskFactor"
-                                            name="itemRiskFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="itemWeightFactor">Weight Factor Score</label>
-                                        <input type="number" class="form-control" id="itemWeightFactor"
-                                            name="itemWeightFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="itemSizeFactor">Size Factor Score</label>
-                                        <input type="number" class="form-control" id="itemSizeFactor"
-                                            name="itemSizeFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="itemTypeFactor">Type Factor Score</label>
-                                        <input type="number" class="form-control" id="itemTypeFactor"
-                                            name="itemTypeFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="itemPackagingFactor">Packaging Factor Score</label>
-                                        <input type="number" class="form-control" id="itemPackagingFactor"
-                                            name="itemPackagingFactor" step="0.01" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <!-- Transit Factors -->
-                        <div class="col-md-6 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Transit Factors</h4>
-                                    <p class="card-description">Enter transit factor scores</p>
-                                    <div class="form-group">
-                                        <label for="transitDurationFactor">Transit Duration Factor Score</label>
-                                        <input type="number" class="form-control" id="transitDurationFactor"
-                                            name="transitDurationFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="transitDistanceFactor">Transit Distance Factor Score</label>
-                                        <input type="number" class="form-control" id="transitDistanceFactor"
-                                            name="transitDistanceFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="transitRouteFactor">Transit Route Factor Score</label>
-                                        <input type="number" class="form-control" id="transitRouteFactor"
-                                            name="transitRouteFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="transitModeFactor">Transit Mode Factor Score</label>
-                                        <input type="number" class="form-control" id="transitModeFactor"
-                                            name="transitModeFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="transitHandlingFactor">Transit Handling Factor Score</label>
-                                        <input type="number" class="form-control" id="transitHandlingFactor"
-                                            name="transitHandlingFactor" step="0.01" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Weather Factors -->
-                        <div class="col-md-6 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Weather Factors</h4>
-                                    <p class="card-description">Enter weather factor scores</p>
-                                    <div class="form-group">
-                                        <label for="weatherFactor">Weather Factor Score</label>
-                                        <input type="number" class="form-control" id="weatherFactor"
-                                            name="weatherFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="temperatureFactor">Temperature Factor Score</label>
-                                        <input type="number" class="form-control" id="temperatureFactor"
-                                            name="temperatureFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="humidityFactor">Humidity Factor Score</label>
-                                        <input type="number" class="form-control" id="humidityFactor"
-                                            name="humidityFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="altitudeFactor">Altitude Factor Score</label>
-                                        <input type="number" class="form-control" id="altitudeFactor"
-                                            name="altitudeFactor" step="0.01" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Security and Human Factors -->
-                        <div class="col-md-6 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Security and Human Factors</h4>
-                                    <p class="card-description">Enter security and human factor scores</p>
-                                    <div class="form-group">
-                                        <label for="securityRiskFactor">Security Risk Factor Score</label>
-                                        <input type="number" class="form-control" id="securityRiskFactor"
-                                            name="securityRiskFactor" step="0.01" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="humanFactorRiskFactor">Human Factor Risk Factor Score</label>
-                                        <input type="number" class="form-control" id="humanFactorRiskFactor"
-                                            name="humanFactorRiskFactor" step="0.01" required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Risk Score -->
-                        <div class="col-md-6 grid-margin">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="card-title">Risk Score</h4>
-                                    <p class="card-description">Calculated risk score</p>
-                                    <div class="form-group">
-                                        <label for="riskScore">Risk Score</label>
-                                        <input type="number" class="form-control" id="riskScore" name="riskScore"
-                                            step="0.01" readonly>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Add Cargo Type</button>
-                </form>
+                <!-- content-wrapper ends -->
 
             </div>
-            <!-- content-wrapper ends -->
-
+            <!-- main-panel ends -->
         </div>
-        <!-- main-panel ends -->
 
-
-
-    </div>
-
-    <!-- page-body-wrapper ends -->
+        <!-- page-body-wrapper ends -->
     </div>
     <!-- container-scroller -->
 
@@ -598,12 +577,12 @@
 
 
     <!-- CUSTOM JS -->
-    <script src="../controlers/cargo_types.js"></script>
+    <script src="../controlers/all_policies.js"></script>
     <!-- END CUSTOM JS -->
 
     <script>
-        // Call the function to populate the table with the JSON data
-        populateCargoTable(registeredCargoTypes);
+        // Call the function to populate the table when the page loads
+        window.addEventListener("load", populatePolicyTable);
     </script>
 </body>
 
