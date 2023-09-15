@@ -461,7 +461,7 @@
 
     <script>
         var response_data = null;
-        callAPI('GET', 'https://api.pixel-insurance.patrickmamsery.works/api/users', null, function (response) {
+        callAPI('GET', 'https://api.pixel-insurance.patrickmamsery.works/api/users?page=5', null, function (response) {
             // create a 'fa-spin' loader inside the button and put it inside of the table body
             response_data = response.data.data.data;
             populateTable(response_data);
